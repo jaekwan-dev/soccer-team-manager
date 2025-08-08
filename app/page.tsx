@@ -216,46 +216,7 @@ export default function Dashboard() {
 
           {/* Mobile Tab Indicator */}
           <TabsContent value="dashboard" className="space-y-4 sm:space-y-6">
-            {/* 주요 지표 카드들 - 모바일 최적화 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">총 팀원</CardTitle>
-                  <Users className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{sampleData.team.totalMembers}명</div>
-                  <p className="text-xs text-muted-foreground">
-                    활성 멤버 {sampleData.team.activeMembers}명
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">평균 출석률</CardTitle>
-                  <UserCheck className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{sampleData.recentStats.attendanceRate}%</div>
-                  <Progress value={sampleData.recentStats.attendanceRate} className="mt-2" />
-                </CardContent>
-              </Card>
-
-              <Card className="sm:col-span-2 lg:col-span-1">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">다음 경기</CardTitle>
-                  <Calendar className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">D-7</div>
-                  <p className="text-xs text-muted-foreground">
-                    8월 15일 오후 7시
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
+            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {/* 다음 경기 정보 */}
               <Card>
@@ -330,6 +291,33 @@ export default function Dashboard() {
                       </div>
                     ))}
                   </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* 주요 지표 카드들 - 모바일 최적화 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">총 팀원</CardTitle>
+                  <Users className="h-4 w-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">{sampleData.team.totalMembers}명</div>
+                  <p className="text-xs text-muted-foreground">
+                    활성 멤버 {sampleData.team.activeMembers}명
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">평균 출석률</CardTitle>
+                  <UserCheck className="h-4 w-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">{sampleData.recentStats.attendanceRate}%</div>
+                  <Progress value={sampleData.recentStats.attendanceRate} className="mt-2" />
                 </CardContent>
               </Card>
             </div>
