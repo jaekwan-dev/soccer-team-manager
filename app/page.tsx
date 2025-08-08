@@ -89,8 +89,9 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
+              {/* FC 브로 엠블럼 이미지 추가 */}
               <Avatar className="h-8 w-8 sm:h-10 sm:w-10">
-                <AvatarImage src={sampleData.team.emblem || "/placeholder.svg"} alt="Team Logo" />
+                <AvatarImage src={"/fc-bro-emblem.jpg"} alt="Team Logo" />
                 <AvatarFallback>FC</AvatarFallback>
               </Avatar>
               <div className="hidden sm:block">
