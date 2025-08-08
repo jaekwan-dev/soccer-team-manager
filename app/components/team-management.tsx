@@ -137,7 +137,7 @@ export function TeamManagement({ isManagerMode }: TeamManagementProps) {
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold">팀원 관리</h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground hidden md:block">
             {isManagerMode ? "팀원 정보를 관리하고 평가하세요" : "팀원 정보를 확인하세요"}
           </p>
         </div>

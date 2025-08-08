@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import { Calendar, Users, Trophy, TrendingUp, MapPin, Clock, UserCheck, Target, BarChart3, Settings, Shield, User, Award, Menu, Star } from 'lucide-react'
 import { TeamManagement } from "./components/team-management"
 import { ScheduleManagement } from "./components/schedule-management"
@@ -98,7 +98,7 @@ export default function Dashboard() {
                 <p className="text-sm text-gray-500">팀 관리 플랫폼</p>
               </div>
               <div className="sm:hidden">
-                <h1 className="text-lg font-bold text-gray-900">FC 썬더볼트</h1>
+                <h1 className="text-lg font-bold text-gray-900">FC 브로</h1>
               </div>
             </div>
             
@@ -141,6 +141,12 @@ export default function Dashboard() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-80">
+                  <SheetHeader>
+                    <SheetTitle>메뉴</SheetTitle>
+                    <SheetDescription>
+                      원하는 메뉴를 선택하세요.
+                    </SheetDescription>
+                  </SheetHeader>
                   <div className="space-y-6 py-4">
                     {/* Mode Switch in Mobile */}
                     <div className="space-y-4">

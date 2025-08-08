@@ -69,7 +69,7 @@ export function AttendanceStats({ isManagerMode }: AttendanceStatsProps) {
       {/* 헤더 */}
       <div>
         <h2 className="text-2xl font-bold">출석률 및 통계</h2>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground hidden md:block">
           {isManagerMode ? "팀원들의 출석률과 경기 통계를 확인하세요" : "팀의 출석률과 경기 통계를 확인하세요"}
         </p>
       </div>

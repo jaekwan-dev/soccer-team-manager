@@ -5,7 +5,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "FC 썬더볼트 - 팀 관리 플랫폼",
+  title: "FC 브로 - 팀 관리 플랫폼",
   description: "아마추어 축구팀 통합 관리 플랫폼",
     generator: 'v0.dev'
 }

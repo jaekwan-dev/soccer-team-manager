@@ -131,6 +131,12 @@ export function ScheduleManagement({ isManagerMode }: ScheduleManagementProps) {
     <div className="space-y-6">
       {/* 헤더 */}
       <div className="flex justify-between items-center">
+        <div>
+          <h2 className="text-2xl font-bold">일정 관리</h2>
+          <p className="text-muted-foreground hidden md:block">
+            {isManagerMode ? "팀원 정보를 관리하고 평가하세요" : "팀원 정보를 확인하세요"}
+          </p>
+        </div>
         {isManagerMode && (
           <Dialog open={isAddingSchedule} onOpenChange={setIsAddingSchedule}>
             <DialogTrigger asChild>
